@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+
+<head>
+    <title>首页</title>
+</head>
+<body>
+<h1>首页</h1>
+<hr>
+<ul>
+    <li><a href="user/index">个人中心</a></li>
+    <li><a href="vip/index">会员中心</a></li>
+    <p shiro:hasPermission="svip"><li>这是svip能看到的p标签</li></p>
+    <shiro:hasPermission name="vip"><li>这是vip能看到的</li></shiro:hasPermission>
+    <shiro:hasPermission name="svip"><li>这是svip能看到的</li></shiro:hasPermission>
+    <li><a href="logout">退出登录</a></li>
+</ul>
+</body>
+</html>

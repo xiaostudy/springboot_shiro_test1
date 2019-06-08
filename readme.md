@@ -1,0 +1,1 @@
+springboot与shiro和mybatis和mysql的搭建测试环境可用
